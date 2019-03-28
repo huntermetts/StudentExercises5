@@ -29,6 +29,7 @@ namespace StudentExercisesAPI.Controllers
             }
         }
 
+        /*
         [HttpGet]
         public List<Cohort> GetAllCohorts()
         {
@@ -166,6 +167,8 @@ namespace StudentExercisesAPI.Controllers
                 }
             }
         }
+
+    */
 
     }
 }

@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace StudentExercisesAPI.Models
 {
@@ -11,18 +8,19 @@ namespace StudentExercisesAPI.Models
         public int Id { get; set; }
 
         [Required]
+        [StringLength(50, MinimumLength = 2)]
         public string FirstName { get; set; }
 
         [Required]
         public string LastName { get; set; }
 
         [Required]
-        [StringLength(12, MinimumLength = 3)]
         public string SlackHandle { get; set; }
 
+        [Required]
         public int CohortId { get; set; }
 
-        public string name { get; set; }
-
+        public Cohort Cohort { get; set; }
+        public List<Exercises> Exercises { get; set; } = new List<Exercises>();
     }
 }
